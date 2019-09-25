@@ -15,7 +15,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="latihan1.php">Home <span class="sr-only">(current)</span></a>
@@ -25,74 +25,60 @@
       </li>
     </ul>
     
-    
-  </div> -->
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
 </nav>
     <!-- End Header -->
 
     <!-- Content -->
     <div class="container-fluid">
-        <div class="row justify-content-left">
+        <div class="row">
             <div class="col-md-6" style="padding:20px;">
-                <div class="card border-primary">
-                    <div class="card-header">Raport</div>
+                <div class="card">
+                    <div class="card-header">Latihan</div>
                     <div class="card-body">
                         <form action="" method="post">
                             <div class="form-group">
-                                <label for="">Nama</label>
-                                <input type="text" name="nama" class="form-control" placeholder="Nama" required>
+                                <label>Nama</label>
+                                <input type="text" name="nama" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="">Kelas</label>
-                                <input type="text" name="kelas" class="form-control" placeholder="Kelas" required>
+                                <label>Kelas</label>
+                                <input type="text" name="kelas" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="">Alamat</label>
-                                <textarea name="alamat" class="form-control" cols="10" placeholder="Alamat" rows="5" required></textarea>
+                                <button type="submit" name="simpan" class="btn btn-success">
+                                    Simpan</button>
                             </div>
-                            <div class="form-group">
-                                <label for="">Nilai UTS</label>
-                                <input type="number" name="uts" class="form-control" placeholder="Nilai UTS" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Nilai UAS</label>
-                                <input type="number" name="uas" class="form-control" placeholder="Nilai UAS" required>
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-primary btn-block:" name="simpan">Simpan</button>
-                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
             <div class="col-md-6" style="padding:20px;">
-                <center><h2>Output</h2></center>
                 <div class="table-responsive">
                     <table class="table">
                         <tr>
                             <th>Nama</th>
                             <th>Kelas</th>
-                            <th>Alamat</th>
-                            <th>Nilai UTS</th>
-                            <th>Nilai UAS</th>
                         </tr>
-                        <?php
+                        <!-- PHP -->
+                        <?php 
                         if (isset($_POST['simpan'])) {
                             $a = $_POST['nama'];
                             $b = $_POST['kelas'];
-                            $c = $_POST['alamat'];
-                            $d = $_POST['uts'];
-                            $e = $_POST['uas'];
                             ?>
+                        <!-- End PHP -->
                         <tr>
                             <td><?php echo $a; ?></td>
                             <td><?php echo $b; ?></td>
-                            <td><?php echo $c; ?></td>
-                            <td><?php echo $d; ?></td>
-                            <td><?php echo $e; ?></td>
                         </tr>
                         <?php 
                     } ?>
                     </table>
+                </div>
             </div>
         </div>
     </div>
