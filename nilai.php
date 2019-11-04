@@ -34,20 +34,19 @@
     <!-- End Header -->
 
     <!-- Content -->
-    <?php 
-    if (isset($_POST['simpan'])) {
-        $siswa = $_POST['jml'];
-
-        for ($i = 0; $i < $siswa; $i++) {
-            ?>
-
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-8" style="padding:20px;">
                 <div class="card border-primary">
                     <div class="card-header">Data Siswa</div>
                     <div class="card-body">
-                        <form action="" method="post">
+                        <form action="output.php" method="post">
+                            <?php 
+                            if (isset($_POST['simpan'])) {
+                                $siswa = $_POST['jml'];
+
+                                for ($i = 0; $i < $siswa; $i++) {
+                                    ?>
                             <div class="form-group">
                                 <label>Nama</label>
                                 <input type="text" name="nama[]" class="form-control" required>
@@ -68,20 +67,18 @@
                                 <label>Nilai UAS</label>
                                 <input type="number" name="uas[]" class="form-control" required>
                             </div>
-                            <div class="form-group">
-                                <button class="btn btn-primary btn-block:" name="simpan">Simpan</button>
-                            </div>
-                        </form>
+                            <hr style="height:5px; background-color:#000000;">
+                        <?php 
+                    }
+                } ?>
+                            <button class="btn btn-primary btn-block:" name="simpan">Simpan</button>
+                        </form>    
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <?php 
-}
-}
-?>
     <!-- End Content -->
 
     <!-- Footer -->

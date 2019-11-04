@@ -38,11 +38,11 @@
         <div class="row justify-content-center">
             <div class="col-md-8" style="padding:20px;">
                 <div class="jumbotron">
-                  <h1 class="display-4">Halo!</h1>
+                  <h1 class="display-4">Bonjour!</h1>
                   <p class="lead">This is a simple information about students score.</p>
                   <hr class="my-4">
                   <p>udah si gitu aja.</p>
-                  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                  <a class="btn btn-primary btn-lg" href="jmlsiswa.php" role="button">Learn more</a>
                 </div>
             </div>
         </div>
